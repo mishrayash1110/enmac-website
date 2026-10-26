@@ -1,0 +1,12 @@
+import type {Metadata} from 'next';
+import {PageHero,Container,Notice,CTA} from '@/components/ui/Shared';
+export const metadata:Metadata={title:'Privacy Policy',robots:{index:false,follow:true}};
+export default function Legal(){return <><PageHero layout="legal" eyebrow="TRANSPARENCY & INFORMATION" title='Privacy Policy' subtitle='Draft privacy notice — requires ENMAC and legal review.'/>
+<section className="section"><Container><div className="legal-body"><span className="legal-draft">UNAPPROVED DRAFT · FOR CLIENT AND LEGAL REVIEW</span>
+<section><h2>Information you provide</h2><p>When you choose to submit an enquiry or an application of interest, you may provide contact information, borrower type, city and financing needs. Business applicants may optionally provide business-profile details. Do not upload PAN, Aadhaar, bank credentials or financial documents to these forms.</p></section>
+<section><h2>Why information is collected</h2><p>The proposed purpose is to respond to enquiries and help you understand relevant financing services. Additional use, onward sharing and consent requirements must be approved by ENMAC before launch.</p></section>
+<section><h2>Sharing with lenders</h2><p>This site does not assert that data is automatically shared with any bank or NBFC. Any actual onward sharing requires a suitable lawful basis, transparent notice, approved business process and controls.</p></section>
+<section><h2>Security and retention</h2><p>The planned application uses server-side validation, restricted database access and encrypted transport. ENMAC must finalize retention periods, security monitoring, deletion policies and incident processes before production.</p></section>
+<section><h2>Your choices and contact</h2><p>You should be able to request access, correction, withdrawal of consent and other applicable rights via verified privacy contact details. ENMAC has not provided a privacy contact, and this draft must not be published as final.</p></section>
+<section><h2>Analytics and third parties</h2><p>No advertising pixel, third-party analytics, payment collection or credit bureau connection is configured in this codebase. Any future integration requires its own review and notices.</p></section>
+<Notice>This page is a draft pending verified company details, regulatory review, approved policy language and legal sign-off. Do not treat it as an operative ENMAC policy.</Notice></div></Container></section><CTA/></>}

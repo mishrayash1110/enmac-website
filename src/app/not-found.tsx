@@ -1,0 +1,2 @@
+import {Container,ButtonLink} from '@/components/ui/Shared';
+export default function NotFound(){return <section className="notfound"><Container><span className="notfound-code">404</span><h1>That page took a different turn.</h1><p>We couldn’t find the page you were looking for. Your next financial step is still a click away.</p><ButtonLink href="/">Back to homepage</ButtonLink></Container></section>}

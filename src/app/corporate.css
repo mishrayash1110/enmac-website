@@ -1,0 +1,416 @@
+/* ENMAC corporate presentation. Existing layouts, content and tools remain the base. */
+:root {
+  --blue: #0878c1;
+  --deep: #075c9b;
+  --heading: #1a2934;
+  --navy: #223746;
+  --text: #52616b;
+  --muted: #71808a;
+  --sky: #f3f8fc;
+  --pale: #f7f8f7;
+  --border: #e5e9ed;
+  --white: #fff;
+  --shadow: 0 14px 36px rgb(26 41 52 / 6%);
+}
+
+.corporate-site { color: var(--navy); background: var(--white); }
+.corporate-site h1, .corporate-site h2, .corporate-site h3,
+.corporate-site h4, .corporate-site h5 { color: var(--heading); font-weight: 650; letter-spacing: -.035em; text-wrap: balance; }
+.corporate-site p { color: var(--text); }
+.corporate-site strong { font-weight: 650; }
+.corporate-site em { color: inherit; }
+.corporate-site .container { width: min(1240px, calc(100% - 80px)); }
+.corporate-site .section, .corporate-site .home-refresh .section { padding: 88px 0; }
+.corporate-site .section-intro h2, .corporate-site .home-refresh .section-intro h2,
+.corporate-site .feature-copy h2 { font-size: clamp(29px, 3.1vw, 43px); font-weight: 650; line-height: 1.22; letter-spacing: -.035em; }
+.corporate-site .section-intro p { font-size: 16px; line-height: 1.8; }
+.corporate-site .eyebrow, .corporate-site .micro-label, .corporate-site .mega-kicker,
+.corporate-site .finder-kicker { color: var(--text); font-size: 10px; font-weight: 650; letter-spacing: .12em; }
+.corporate-site .eyebrow-dot { width: 5px; height: 5px; background: var(--blue); box-shadow: none; }
+.corporate-site ::selection { color: var(--heading); background: #dcebf5; }
+.corporate-site :focus-visible { outline: 2px solid var(--deep); outline-offset: 4px; }
+.skip-link { position: fixed; top: 8px; left: 16px; z-index: 100; transform: translateY(-200%); padding: 12px 20px; background: var(--heading); color: #fff; border-radius: 4px; }
+.skip-link:focus { transform: none; }
+
+/* Quiet navigation and a single clear primary action. */
+.corporate-site .topbar { color: var(--text); background: var(--pale); border-bottom: 1px solid var(--border); font-size: 10px; }
+.corporate-site .topbar-content { min-height: 33px; }
+.corporate-site .site-header { background: #fff; border-color: var(--border); backdrop-filter: none; box-shadow: 0 2px 10px rgb(26 41 52 / 2%); }
+.corporate-site .header-inner { height: 88px; gap: 22px; }
+.corporate-site .enmac-logo { width: 126px; height: 71px; border-radius: 0; }
+.corporate-site .desktop-nav { gap: 22px; }
+.corporate-site .nav-link { color: var(--heading); font-weight: 600; font-size: 12px; }
+.corporate-site .nav-link.active, .corporate-site .nav-link:hover { color: var(--deep); }
+.corporate-site .nav-link.active::after { height: 1px; }
+.corporate-site .btn { border-radius: 5px; font-weight: 600; min-height: 48px; box-shadow: none; transition: background .18s, border-color .18s, color .18s; }
+.corporate-site .btn:hover { transform: none; }
+.corporate-site .btn-primary { background: var(--blue); color: #fff; box-shadow: none; }
+.corporate-site .btn-primary:hover { background: var(--deep); }
+.corporate-site .btn-secondary { background: transparent; color: var(--heading); border-color: #c8d0d6; }
+.corporate-site .btn-secondary:hover { background: var(--pale); border-color: var(--navy); }
+.corporate-site .btn-white { color: var(--heading); background: #fff; }
+.corporate-site .btn-text, .corporate-site .text-link, .corporate-site .service-link,
+.corporate-site .link-button { color: var(--deep); font-weight: 600; }
+.corporate-site .btn:disabled { opacity: .6; cursor: wait; }
+.corporate-site .mega-menu { border-radius: 8px; box-shadow: var(--shadow); }
+.corporate-site .mega-menu > div:first-child { background: var(--pale); border-radius: 4px; }
+.corporate-site .mega-links a:hover { color: var(--deep); background: var(--pale); }
+.corporate-site .mobile-toggle { background: #fff; color: var(--heading); border-radius: 5px; }
+.corporate-site .mobile-nav { box-shadow: var(--shadow); }
+.corporate-site .mobile-subnav a { color: var(--text); }
+
+/* Homepage: editorial copy, real imagery, no artificial dashboard or logo repetition. */
+.corporate-site .home-refresh .hero { background: #fff; border-bottom: 1px solid var(--border); }
+.corporate-site .home-refresh .hero-grid { grid-template-columns: 1.04fr .96fr; gap: 72px; padding: 72px 0 80px; min-height: 650px; }
+.corporate-site .home-refresh .hero-copy > .eyebrow { padding: 0; border: 0; background: none; border-radius: 0; font-size: 10px; letter-spacing: .12em; }
+.corporate-site .home-refresh .hero-copy h1 { font-size: clamp(44px, 4.4vw, 62px); line-height: 1.12; font-weight: 650; letter-spacing: -.045em; margin: 24px 0; }
+.corporate-site .hero-copy h1 span { color: var(--heading); }
+.corporate-site .home-refresh .hero-copy > p { font-size: 16px; max-width: 540px; }
+.corporate-site .home-refresh .hero-actions { gap: 12px; }
+.corporate-site .home-refresh .hero-actions .btn { font-size: 13px; min-height: 52px; border-radius: 5px; padding: 14px 22px; }
+.corporate-site .home-refresh .hero-trust { padding-top: 24px; border-top: 1px solid var(--border); margin-top: 32px; gap: 20px; }
+.corporate-site .hero-trust span { color: var(--text); font-size: 11px; font-weight: 500; }
+.corporate-site .hero-trust svg { color: var(--text); }
+.corporate-site .hero-bg-orb, .corporate-site .page-hero-circle,
+.corporate-site .cta-orb, .corporate-site .corporate-panel::after,
+.corporate-site .guide-art::before, .corporate-site .guide-art::after { display: none; }
+.corporate-site .brand-showcase { background: var(--pale); border: 0; border-radius: 6px; box-shadow: none; padding: 0 0 26px; text-align: left; }
+.corporate-site .brand-showcase > .micro-label { display: block; padding: 20px 26px; font-size: 9px; color: var(--text); }
+.corporate-site .hero-logo-frame { margin: 0; }
+.corporate-site .hero-logo-frame img { height: 310px; width: 100%; object-fit: cover; }
+.corporate-site .showcase-divider { display: none; }
+.corporate-site .brand-showcase h2 { font-size: 22px; margin: 25px 26px 10px; }
+.corporate-site .brand-showcase p { margin: 0 26px 20px; font-size: 13px; }
+.corporate-site .showcase-categories { justify-content: flex-start; margin: 0 26px; color: var(--text); font-weight: 500; }
+.corporate-site .showcase-note { position: static; margin-top: 15px; padding: 0; border: 0; border-radius: 0; box-shadow: none; gap: 10px; background: transparent; }
+.corporate-site .showcase-note > span { background: transparent; width: 24px; height: 30px; color: var(--text); }
+.corporate-site .showcase-note strong { font-size: 11px; color: var(--navy); }
+.corporate-site .showcase-note small { color: var(--text); font-size: 10px; }
+
+/* Why ENMAC is a text-and-image composition rather than another row of cards. */
+.corporate-site .why-editorial { display: grid; grid-template-columns: .86fr 1.14fr; gap: 80px; align-items: center; }
+.corporate-site .why-editorial-image { position: relative; align-self: stretch; min-height: 540px; }
+.corporate-site .why-editorial-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
+.corporate-site .why-editorial-image > span { position: absolute; left: 0; bottom: 0; width: 100%; background: #fff; padding: 20px 0 0; color: var(--text); }
+.corporate-site .why-editorial .section-intro { margin-bottom: 24px; }
+.corporate-site .reference-benefit-grid { display: block; }
+.corporate-site .reference-benefit-grid article { background: transparent; padding: 21px 0; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; min-height: 0; display: grid; grid-template-columns: 32px 1fr; column-gap: 15px; }
+.corporate-site .reference-benefit-grid article:hover { transform: none; box-shadow: none; }
+.corporate-site .benefit-icon { grid-row: span 2; width: 30px; height: 30px; margin: 0; border: 0; border-radius: 0; background: none; color: var(--text); box-shadow: none; }
+.corporate-site .reference-benefit-grid h3 { font-size: 17px; margin: 0 0 5px; letter-spacing: -.015em; }
+.corporate-site .reference-benefit-grid p { font-size: 13px; margin: 0; }
+.corporate-site .benefits-link { text-align: left; margin-top: 22px; }
+
+/* Neutral service cards and restrained photography. */
+.corporate-site .pale-section, .corporate-site .home-refresh .section-solutions,
+.corporate-site .home-refresh .network-section, .corporate-site .home-refresh .trust-section { background: var(--pale); }
+.corporate-site .home-refresh .section-finder, .corporate-site .network-section,
+.corporate-site .finance-home, .corporate-site .corporate-section { background: #fff; }
+.corporate-site .segmented-tabs { background: #eef0ef; border-color: var(--border); border-radius: 6px; padding: 4px; }
+.corporate-site .segmented-tabs button { border-radius: 3px; color: var(--text); font-weight: 600; min-height: 44px; }
+.corporate-site .segmented-tabs button.active { background: #fff; box-shadow: 0 1px 4px #1a29340a; color: var(--deep); }
+.corporate-site .service-tile, .corporate-site .home-refresh .service-tile { border-radius: 6px; border-color: var(--border); padding: 28px; box-shadow: none; min-height: 255px; background: #fff; }
+.corporate-site .service-tile:hover { transform: none; box-shadow: none; border-color: #a7b5be; }
+.corporate-site .service-tile h3 { font-size: 18px; font-weight: 650; }
+.corporate-site .service-tile p { font-size: 13px; color: var(--text); }
+.corporate-site .service-icon, .corporate-site .service-tile.photo-card .service-icon { width: 40px; height: 40px; background: transparent; color: var(--deep); box-shadow: none; border: 0; border-radius: 0; justify-content: start; }
+.corporate-site .photo-card > .card-backdrop { background: var(--pale); }
+.corporate-site .photo-card .card-backdrop img { opacity: .2; filter: saturate(.3); }
+.corporate-site .photo-card .card-backdrop::after { background: linear-gradient(100deg,#fffffff9 0%,#ffffffed 50%,#ffffff9c); }
+.corporate-site .home-refresh .section-solutions .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.corporate-site .home-refresh .section-solutions .service-tile { min-height: 230px; }
+.corporate-site .home-refresh .section-solutions .service-tile:first-child { background: var(--navy); }
+.corporate-site .home-refresh .section-solutions .service-tile:first-child .card-backdrop { background: var(--navy); }
+.corporate-site .home-refresh .section-solutions .service-tile:first-child .card-backdrop img { opacity: .23; }
+.corporate-site .home-refresh .section-solutions .service-tile:first-child .card-backdrop::after { background: linear-gradient(100deg,#223746f5,#223746bf); }
+.corporate-site .home-refresh .section-solutions .service-tile:first-child h3,
+.corporate-site .home-refresh .section-solutions .service-tile:first-child .service-icon,
+.corporate-site .home-refresh .section-solutions .service-tile:first-child .service-link { color: #fff; }
+.corporate-site .home-refresh .section-solutions .service-tile:first-child p { color: #dce2e6; }
+.corporate-site .finder { border-color: var(--border); border-radius: 8px; box-shadow: none; }
+.corporate-site .finder-counter { color: var(--text); background: var(--pale); border-radius: 4px; }
+.corporate-site .finder-progress, .corporate-site .checklist-progress { background: #e9ecee; }
+.corporate-site .choice, .corporate-site .purpose-choice { border-color: var(--border); border-radius: 5px; }
+.corporate-site .choice:hover, .corporate-site .purpose-choice:hover,
+.corporate-site .choice.chosen, .corporate-site .purpose-choice.chosen { background: var(--sky); border-color: var(--blue); }
+.corporate-site .finder-results { background: var(--pale); }
+.corporate-site .finder-bottom { border-color: var(--border); }
+.corporate-site .split-tag { color: var(--text); font-weight: 500; }
+.corporate-site .finder-disclaimer { color: var(--text); }
+
+/* The financing network retains all eight interactive paths. */
+.corporate-site .network-ring { border-color: #d6dde1; }
+.corporate-site .ring-two { border-style: solid; opacity: .6; }
+.corporate-site .ring-three { display: none; }
+.corporate-site .network-center { background: #fff; color: var(--navy); border: 1px solid var(--border); box-shadow: 0 5px 22px #1a293408; width: 172px; height: 172px; }
+.corporate-site .network-center .enmac-logo { width: 126px; height: 71px; }
+.corporate-site .network-center small { font-size: 8px; color: var(--text); letter-spacing: .1em; margin-top: 8px; }
+.corporate-site .network-node { border-color: var(--border); box-shadow: none; border-radius: 5px; color: var(--navy); font-weight: 600; min-height: 44px; }
+.corporate-site .network-node.current, .corporate-site .network-node:hover { transform: none; border-color: var(--blue); background: #fff; color: var(--deep); box-shadow: none; }
+.corporate-site .node-dot { background: #a7b3bc; box-shadow: none; }
+.corporate-site .network-node.current .node-dot { background: var(--blue); box-shadow: none; }
+.corporate-site .network-detail { border-color: var(--border); border-radius: 5px; background: #fff; box-shadow: none; }
+.corporate-site .network-side > h3 { font-weight: 650; color: var(--heading); }
+.corporate-site .network-detail .number { color: var(--text); }
+.corporate-site .network-mobile-options button { background: #fff; color: var(--text); border-color: var(--border); min-height: 44px; }
+.corporate-site .network-mobile-options button.current { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+/* Process and calculators: clear states without coloured dashboard panels. */
+.corporate-site .home-refresh .process-section { background: var(--pale); color: var(--navy); border-block: 1px solid var(--border); }
+.corporate-site .reference-process-grid .section-intro p { color: var(--text); }
+.corporate-site .reference-process-grid .eyebrow { color: var(--text); }
+.corporate-site .process-box, .corporate-site .reference-process-grid .process-box { background: #fff; border-color: var(--border); border-radius: 8px; box-shadow: none; }
+.corporate-site .process-number, .corporate-site .reference-process-grid .process-number { background: var(--pale); color: var(--text); border-color: var(--border); border-radius: 5px; box-shadow: none; }
+.corporate-site .process-step strong, .corporate-site .reference-process-grid .process-step strong { color: var(--text); font-weight: 600; }
+.corporate-site .process-step.active strong, .corporate-site .reference-process-grid .process-step.active strong { color: var(--heading); }
+.corporate-site .process-step.active .process-number, .corporate-site .reference-process-grid .process-step.active .process-number { background: var(--blue); color: #fff; box-shadow: none; }
+.corporate-site .reference-process-grid .process-step.active, .corporate-site .reference-process-grid .process-step:hover { background: var(--pale); }
+.corporate-site .process-detail { background: var(--pale); border-color: var(--border); border-radius: 5px; }
+.corporate-site .process-icon, .corporate-site .process-next { background: #fff; color: var(--deep); border-radius: 5px; }
+.corporate-site .process-line::before { background: var(--border); }
+.corporate-site .process-next { min-width: 44px; min-height: 44px; }
+.corporate-site .link-button { min-height: 44px; }
+.corporate-site .calc-suite { border-color: var(--border); box-shadow: none; border-radius: 8px; }
+.corporate-site .calc-tabs { background: var(--pale); border-color: var(--border); }
+.corporate-site .calc-tabs button { color: var(--text); min-height: 46px; font-weight: 600; border-radius: 4px; }
+.corporate-site .calc-tabs button.active { color: var(--deep); background: #fff; box-shadow: none; }
+.corporate-site .calc-panel { background: #fff; }
+.corporate-site .calc-results { background: var(--pale); border: 1px solid var(--border); border-radius: 6px; }
+.corporate-site .calc-field label, .corporate-site .calc-input input { color: var(--heading); font-weight: 600; }
+.corporate-site .calc-input { background: #fff; border-color: #cbd2d7; border-radius: 4px; }
+.corporate-site .calc-input > span, .corporate-site .result-label,
+.corporate-site .result-grid span, .corporate-site .chart-legend span,
+.corporate-site .amort-chart > span { color: var(--text); }
+.corporate-site .hero-number { color: var(--heading); font-size: 40px; font-weight: 650; letter-spacing: -.04em; }
+.corporate-site .result-rule, .corporate-site .amort-chart { border-color: var(--border); }
+.corporate-site .result-rule, .corporate-site .split-bar { background: #dce1e5; }
+.corporate-site .legend-secondary { background: #c9d2d9; }
+.corporate-site .amort-svg path[fill]:not([fill="none"]) { fill: #edf1f4; }
+.corporate-site .amort-svg line { stroke: #d6dde1; }
+.corporate-site .amort-svg text { fill: var(--text); }
+.corporate-site .calc-helper, .corporate-site .tool-note { color: var(--text); }
+.corporate-site .calc-helper { background: var(--pale); border-radius: 4px; }
+.corporate-site .compare-card { background: #fff; border-radius: 5px; }
+.corporate-site .compare-outcome span { color: var(--text); }
+.corporate-site .difference-callout { background: var(--pale); color: var(--navy); border-radius: 0; }
+.corporate-site .prepay-results > div, .corporate-site .prepay-highlight { background: var(--pale) !important; border: 1px solid var(--border); border-radius: 5px; }
+.corporate-site .prepay-results span, .corporate-site .prepay-results small { color: var(--text); }
+.corporate-site .prepay-highlight strong { color: var(--heading); }
+.corporate-site .checklist-pills button, .corporate-site .guide-filters button { border-color: var(--border); color: var(--text); border-radius: 4px; min-height: 44px; font-weight: 600; }
+.corporate-site .checklist-pills button.selected, .corporate-site .guide-filters button.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+.corporate-site .checklist-items label { border-radius: 4px; }
+
+/* An editorial business feature and a separate, light contact composition. */
+.corporate-site .home-refresh .corporate-panel { background: var(--navy); border-radius: 6px; padding: 52px; gap: 54px; min-height: 520px; }
+.corporate-site .corporate-panel > .card-backdrop { display: none; }
+.corporate-site .corporate-copy h2 { color: #fff; font-size: clamp(32px, 3.4vw, 45px); font-weight: 600; }
+.corporate-site .corporate-copy h2 em { color: #fff; }
+.corporate-site .corporate-copy > p { color: #d3dce2; }
+.corporate-site .corporate-copy .eyebrow { color: #cbd5dc; }
+.corporate-site .chip { color: #e6ebef; background: transparent; border-color: #60717d; border-radius: 3px; font-weight: 500; }
+.corporate-site .corporate-art .financial-art { height: 390px; border: 0; }
+.corporate-site .financial-art.editorial-photo { border-radius: 5px; background: var(--pale); box-shadow: none; transform: none; }
+.corporate-site .financial-art.editorial-photo::after { display: none; }
+.editorial-photo > img { object-fit: cover; filter: saturate(.65); }
+.editorial-photo-caption { position: absolute; left: 20px; right: 20px; bottom: 20px; padding: 20px; background: #fff; border: 1px solid var(--border); border-radius: 3px; }
+.corporate-site .editorial-photo-caption .micro-label { font-size: 9px; }
+.editorial-photo-caption strong { display: block; color: var(--heading); margin: 9px 0; font-size: 22px; letter-spacing: -.025em; }
+.corporate-site .editorial-photo-caption p { color: var(--text); font-size: 12px; margin: 0 0 6px; }
+.editorial-photo-caption small { display: block; color: var(--text); font-size: 10px; }
+.corporate-site .home-refresh .enquiry-section { background: #fff; }
+.corporate-site .home-refresh .enquiry-grid { background: var(--pale); border: 1px solid var(--border); border-radius: 6px; padding: 48px; gap: 56px; }
+.corporate-site .enquiry-grid > .card-backdrop { display: none; }
+.corporate-site .home-refresh .enquiry-copy h2 { color: var(--heading); font-size: 36px; font-weight: 650; }
+.corporate-site .home-refresh .enquiry-copy > p, .corporate-site .home-refresh .enquiry-help { color: var(--text); }
+.corporate-site .home-refresh .enquiry-copy .eyebrow, .corporate-site .home-refresh .enquiry-help svg { color: var(--text); }
+.corporate-site .enquiry-form, .corporate-site .home-refresh .enquiry-form { border-color: var(--border); border-radius: 5px; padding: 30px; box-shadow: none; }
+
+/* Articles and supporting cards use quiet separators rather than repeated blue surfaces. */
+.corporate-site .guide-card { border-color: var(--border); border-radius: 5px; background: #fff; }
+.corporate-site .guide-card:hover, .corporate-site .library-card:hover { transform: none; box-shadow: none; border-color: #a7b5be; }
+.corporate-site .guide-art.photo-card-art { background: var(--pale); height: 200px; }
+.corporate-site .photo-card-art .card-backdrop img { opacity: 1; filter: saturate(.45); }
+.corporate-site .photo-card-art .card-backdrop::after { background: #22374612; }
+.corporate-site .photo-card-art > svg { width: 28px; height: 28px; padding: 10px; background: #fffffff2; border-radius: 3px; box-shadow: none; }
+.corporate-site .guide-art > span:not(.card-backdrop) { color: var(--heading); background: #fffffff0; padding: 4px 7px; border-radius: 2px; }
+.corporate-site .guide-inner { padding: 26px; }
+.corporate-site .guide-inner h3 { font-size: 20px; font-weight: 650; }
+.corporate-site .guide-inner p { font-size: 13px; }
+.corporate-site .library-card.photo-card { border-radius: 5px; background: #fff; }
+.corporate-site .library-card .card-backdrop { display: none; }
+.corporate-site .library-icon, .corporate-site .photo-card .library-icon { width: 40px; height: 40px; border: 0; background: var(--pale); color: var(--text); border-radius: 3px; box-shadow: none; }
+.corporate-site .principle-grid article { background: #fff; border-color: var(--border); border-radius: 5px; }
+.corporate-site .principle-grid article .card-backdrop { display: none; }
+.corporate-site .principle-grid article > svg { color: var(--text); }
+.corporate-site .principle-grid .photo-card p, .corporate-site .library-card.photo-card p { color: var(--text); }
+.corporate-site .home-refresh .faq-list { background: transparent; border: 0; border-top: 1px solid var(--border); padding: 0; border-radius: 0; }
+.corporate-site .faq-item > button, .corporate-site .home-refresh .faq-item button { color: var(--heading); font-weight: 600; padding: 24px 0; min-height: 60px; }
+.corporate-site .faq-item.open > button { color: var(--deep); }
+.corporate-site .faq-item svg { color: var(--text); }
+.corporate-site .home-refresh .trust-points p { font-weight: 500; color: var(--text); }
+
+/* Shared subpage treatment covers product, knowledge, application and legal routes. */
+.corporate-site .page-hero, .corporate-site .service-hero, .corporate-site .article-hero { background: var(--pale); border-bottom: 1px solid var(--border); }
+.corporate-site .page-hero { padding: 72px 0 78px; }
+.corporate-site .page-hero h1 { font-size: clamp(36px, 4.1vw, 56px); font-weight: 650; letter-spacing: -.04em; line-height: 1.16; }
+.corporate-site .page-hero p { font-size: 16px; max-width: 720px; }
+.corporate-site .service-hero { padding-bottom: 64px; }
+.corporate-site .service-hero-grid { gap: 64px; }
+.corporate-site .service-hero-grid h1 { font-size: clamp(36px, 3.8vw, 52px); line-height: 1.18; }
+.corporate-site .breadcrumb, .corporate-site .article-meta { color: var(--text); }
+.corporate-site .resource-toolbar > span { color: var(--text); }
+.corporate-site .purpose-grid article { background: var(--pale); border: 1px solid var(--border); border-radius: 4px; }
+.corporate-site .purpose-grid article > span { color: var(--text); }
+.corporate-site .point-list > div { background: var(--pale); color: var(--navy); border-radius: 4px; font-weight: 500; }
+.corporate-site .doc-list > div { border-radius: 4px; font-weight: 500; }
+.corporate-site .aside-card { background: var(--navy); border-radius: 5px; box-shadow: none; }
+.corporate-site .aside-card h3 { color: #fff; }
+.corporate-site .aside-card p, .corporate-site .aside-small { color: #d8e0e5; }
+.corporate-site .aside-card .btn { color: var(--heading); }
+.corporate-site .aside-icon { background: #ffffff0f; border: 1px solid #ffffff29; border-radius: 4px; }
+.corporate-site .aside-related { border-radius: 5px; }
+.corporate-site .article-body .article-lead { color: var(--navy); }
+.corporate-site .article-hero-inner h1 { font-size: clamp(34px, 4vw, 52px); }
+.corporate-site .legal-body section { border-top: 1px solid var(--border); padding-top: 28px; }
+.corporate-site .legal-draft { font-size: 10px; font-weight: 600; letter-spacing: .04em; }
+.corporate-site .search-box { border-color: #cbd2d7; border-radius: 4px; color: var(--text); }
+.corporate-site .search-box:focus-within { border-color: var(--deep); outline: 2px solid #0878c126; }
+.corporate-site .empty-state { border-color: #cbd2d7; border-radius: 5px; background: var(--pale); }
+.corporate-site .notfound { background: var(--pale); }
+.corporate-site .notfound-code { color: #576973; font-weight: 600; }
+.corporate-site .loader { border-color: var(--border); border-top-color: var(--blue); }
+
+/* All existing form controls keep their native validation and application logic. */
+.corporate-site .form-grid label, .corporate-site .calc-field label,
+.corporate-site .lead-form label:not(.check-label), .corporate-site .wizard-form label:not(.check-label) { color: var(--heading); font-size: 12px; font-weight: 600; }
+.corporate-site .lead-form input:not([type=checkbox]), .corporate-site .lead-form select,
+.corporate-site .wizard-form input:not([type=checkbox]), .corporate-site .wizard-form select { color: var(--heading); background: #fff; border-color: #cbd2d7; border-radius: 4px; min-height: 48px; }
+.corporate-site input::placeholder { color: #6b7780; opacity: 1; }
+.corporate-site .lead-form input:focus, .corporate-site .lead-form select:focus,
+.corporate-site .wizard-form input:focus, .corporate-site .wizard-form select:focus { border-color: var(--deep); box-shadow: 0 0 0 3px #0878c119; }
+.corporate-site .check-label { color: var(--text); font-size: 12px; }
+.corporate-site .check-label input { width: 18px; height: 18px; }
+.corporate-site .form-footnote { align-items: flex-start; color: var(--text); font-size: 11px; line-height: 1.6; }
+.corporate-site .form-footnote svg { flex-shrink: 0; margin-top: 2px; }
+.corporate-site .notice { background: var(--pale); border-color: var(--border); border-radius: 4px; }
+.corporate-site .notice p, .corporate-site .notice svg { color: var(--text); }
+.corporate-site .application-wizard { border-radius: 6px; }
+.corporate-site .wizard-steps { background: var(--pale); border-bottom: 1px solid var(--border); }
+.corporate-site .wizard-steps span { border-color: var(--border); color: var(--text); }
+.corporate-site .wizard-steps small { color: var(--text); }
+.corporate-site .wizard-steps .active span, .corporate-site .wizard-steps .done span { background: var(--blue); color: #fff; border-color: var(--blue); }
+.corporate-site .type-cards button { border-radius: 4px; }
+.corporate-site .type-cards button.selected { background: var(--sky); border-color: var(--blue); }
+.corporate-site .apply-sidebar-card { background: var(--pale); border-color: var(--border); border-radius: 5px; }
+.corporate-site .sidebar-promise { background: var(--pale); border-radius: 4px; }
+.corporate-site .review-list span { color: var(--text); }
+
+/* A consistent closing invitation and an accessible corporate footer on every route. */
+.corporate-site .cta-wrap, .corporate-site .home-refresh .cta-wrap { padding: 64px 0; background: var(--pale); border-top: 1px solid var(--border); }
+.corporate-site .cta-panel, .corporate-site .home-refresh .cta-panel { background: transparent; border-radius: 0; color: var(--navy); padding: 0; flex-direction: row; text-align: left; align-items: center; gap: 48px; }
+.corporate-site .cta-copy h2 { color: var(--heading); font-size: clamp(28px, 2.8vw, 38px); max-width: 760px; font-weight: 650; }
+.corporate-site .cta-copy p, .corporate-site .home-refresh .cta-copy p { color: var(--text); margin-inline: 0; }
+.corporate-site .cta-copy .eyebrow { color: var(--text); }
+.corporate-site .cta-actions, .corporate-site .home-refresh .cta-actions { align-items: flex-start; }
+.corporate-site .cta-actions .btn-white { color: #fff; background: var(--blue); min-height: 52px; padding-inline: 25px; }
+.corporate-site .cta-actions .btn-white:hover { background: var(--deep); }
+.corporate-site .cta-actions > span { color: var(--text); font-size: 10px; }
+.corporate-site .footer { background: var(--heading); color: #e1e5e8; padding-top: 64px; }
+.corporate-site .footer-grid { gap: 42px; }
+.corporate-site .footer-logo .enmac-logo { width: 146px; height: 82px; border-radius: 2px; }
+.corporate-site .footer-grid h4 { color: #fff; font-size: 14px; font-weight: 600; }
+.corporate-site .footer-brand p, .corporate-site .footer-grid > div > a:not(.brand),
+.corporate-site .footer-contact, .corporate-site .footer-disclaimer,
+.corporate-site .footer-bottom { color: #bac4cc; }
+.corporate-site .footer-pill { border-color: #465762; color: #d2dbe1; border-radius: 3px; font-weight: 500; }
+.corporate-site .footer-disclaimer { border-color: #3c4a55; font-size: 11px; line-height: 1.8; }
+.corporate-site .footer-bottom { font-size: 11px; }
+.corporate-site .footer-grid > div > a:not(.brand):hover { color: #fff; text-decoration: underline; }
+
+/* Responsive adjustments retain the current mobile tools and content order. */
+@media (max-width: 1200px) {
+  .corporate-site .desktop-nav { gap: 13px; }
+  .corporate-site .nav-link { font-size: 11px; }
+  .corporate-site .header-inner { gap: 16px; }
+  .corporate-site .home-refresh .hero-grid { gap: 42px; }
+  .corporate-site .why-editorial { gap: 48px; }
+  .corporate-site .service-hero-grid { gap: 40px; }
+}
+@media (max-width: 1023px) {
+  .corporate-site .container { width: calc(100% - 48px); }
+  .corporate-site .section, .corporate-site .home-refresh .section { padding: 68px 0; }
+  .corporate-site .home-refresh .hero-grid { grid-template-columns: 1fr; min-height: 0; padding: 56px 0 64px; gap: 42px; }
+  .corporate-site .home-refresh .hero-copy { max-width: 740px; }
+  .corporate-site .home-refresh .hero-visual { max-width: none; }
+  .corporate-site .brand-showcase { display: grid; grid-template-columns: 1.1fr 1fr; column-gap: 28px; padding: 0 26px 0 0; align-items: start; }
+  .corporate-site .brand-showcase > .micro-label { grid-column: 2; padding: 25px 0 0; }
+  .corporate-site .hero-logo-frame { grid-row: 1 / 5; grid-column: 1; height: 100%; }
+  .corporate-site .hero-logo-frame img { height: 100%; min-height: 280px; }
+  .corporate-site .brand-showcase h2 { grid-column: 2; margin: 20px 0 10px; }
+  .corporate-site .brand-showcase p { grid-column: 2; margin: 0 0 20px; }
+  .corporate-site .showcase-categories { grid-column: 2; margin: 0 0 25px; flex-wrap: wrap; gap: 12px; }
+  .corporate-site .why-editorial { grid-template-columns: .85fr 1.15fr; gap: 32px; }
+  .corporate-site .why-editorial-image { min-height: 500px; }
+  .corporate-site .home-refresh .corporate-panel { padding: 36px; gap: 32px; }
+  .corporate-site .cta-panel, .corporate-site .home-refresh .cta-panel { gap: 30px; }
+  .corporate-site .home-refresh .enquiry-grid { padding: 32px; gap: 30px; }
+  .corporate-site .footer-grid { gap: 28px; }
+}
+@media (max-width: 767px) {
+  .corporate-site .container { width: calc(100% - 36px); }
+  .corporate-site .header-inner { height: 76px; }
+  .corporate-site .enmac-logo { width: 110px; height: 62px; }
+  .corporate-site .section, .corporate-site .home-refresh .section { padding: 56px 0; }
+  .corporate-site .home-refresh .hero-copy h1 { font-size: clamp(39px, 8.2vw, 53px); }
+  .corporate-site .home-refresh .hero-copy > p { font-size: 15px; }
+  .corporate-site .brand-showcase { display: block; padding: 0 0 24px; }
+  .corporate-site .brand-showcase > .micro-label { padding: 20px 22px; }
+  .corporate-site .hero-logo-frame img { height: 250px; min-height: 0; }
+  .corporate-site .brand-showcase h2 { margin: 22px 22px 12px; }
+  .corporate-site .brand-showcase p { margin: 0 22px 18px; }
+  .corporate-site .showcase-categories { margin: 0 22px; }
+  .corporate-site .showcase-note { justify-content: flex-start; }
+  .corporate-site .why-editorial { grid-template-columns: 1fr; gap: 34px; }
+  .corporate-site .why-editorial-image { min-height: 0; height: 280px; }
+  .corporate-site .why-editorial-image img { height: 245px; }
+  .corporate-site .why-editorial-image > span { padding-top: 14px; font-size: 9px; }
+  .corporate-site .home-refresh .section-solutions .services-grid { grid-template-columns: 1fr; }
+  .corporate-site .service-tile, .corporate-site .home-refresh .service-tile { padding: 25px; min-height: 235px; }
+  .corporate-site .home-refresh .section-solutions .service-tile { min-height: 230px; }
+  .corporate-site .reference-process-grid .process-box { padding: 20px; }
+  .corporate-site .home-refresh .corporate-panel { grid-template-columns: 1fr; padding: 30px 24px; }
+  .corporate-site .corporate-art .financial-art { height: 360px; }
+  .corporate-site .home-refresh .enquiry-grid { padding: 28px 22px; }
+  .corporate-site .home-refresh .enquiry-copy h2 { font-size: 31px; }
+  .corporate-site .enquiry-form, .corporate-site .home-refresh .enquiry-form { padding: 23px; }
+  .corporate-site .cta-panel, .corporate-site .home-refresh .cta-panel { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .corporate-site .page-hero { padding: 52px 0 58px; }
+  .corporate-site .page-hero h1 { font-size: 38px; }
+  .corporate-site .page-hero p { font-size: 15px; }
+  .corporate-site .service-hero-grid { gap: 32px; }
+  .corporate-site .service-hero-grid h1 { font-size: 37px; }
+  .corporate-site .service-hero-visual .financial-art { height: 355px; }
+  .corporate-site .article-hero-inner h1 { font-size: 36px; }
+  .corporate-site .hero-number { font-size: 36px; }
+}
+@media (max-width: 540px) {
+  .corporate-site .container { width: calc(100% - 32px); }
+  .corporate-site .home-refresh .hero-trust { gap: 12px; }
+  .corporate-site .home-refresh .hero-copy h1 { font-size: clamp(35px, 9.5vw, 47px); }
+  .corporate-site .brand-showcase > .micro-label { font-size: 8px; }
+  .corporate-site .home-refresh .enquiry-grid { padding: 28px 18px; }
+  .corporate-site .enquiry-form, .corporate-site .home-refresh .enquiry-form { padding: 20px 16px; }
+  .corporate-site .check-label { font-size: 11px; }
+  .corporate-site .check-label input { margin-top: 1px; }
+  .corporate-site .form-footnote { font-size: 10px; }
+  .corporate-site .home-refresh .enquiry-copy h2 { font-size: 29px; }
+  .corporate-site .page-hero h1 { font-size: 34px; }
+  .corporate-site .detail-main .section-intro h2 { font-size: 29px; }
+  .corporate-site .editorial-photo-caption { left: 14px; right: 14px; bottom: 14px; padding: 18px; }
+  .corporate-site .editorial-photo-caption strong { font-size: 21px; }
+  .corporate-site .calc-tabs button { font-size: 10px; }
+  .corporate-site .home-refresh .hero-actions .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .corporate-site *, .corporate-site *::before, .corporate-site *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}

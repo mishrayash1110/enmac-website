@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {emi,loanSummary,amortization} from '../src/lib/finance/core.mjs';
+test('standard EMI produces known reducing-balance amount',()=>{assert.ok(Math.abs(emi(100000,12,12)-8884.88)<0.02)});
+test('zero-interest EMI has exact division',()=>{assert.equal(emi(120000,0,12),10000)});
+test('invalid inputs are rejected',()=>{for(const x of [0,-2,1.5])assert.throws(()=>emi(10000,10,x),RangeError);assert.throws(()=>emi(10000,-1,12),RangeError);assert.throws(()=>emi(NaN,10,12),RangeError)});
+test('loan cost comparison accounts for fees separately',()=>{const s=loanSummary(100000,12,12,1250);assert.ok(Math.abs(s.modeledCost-(s.repayment+1250))<0.01)});
+test('amortization settles balance over term',()=>{const s=amortization(100000,12,12);assert.ok(s.remaining<0.01);assert.equal(s.months,12)});
+test('prepayment reduces interest and term',()=>{const a=amortization(200000,12,36);const b=amortization(200000,12,36,50000,3);assert.ok(b.interest<a.interest);assert.ok(b.months<a.months)});
+test('prepayment exceeding balance cannot overpay',()=>{const x=amortization(10000,12,12,100000,2);assert.ok(x.remaining<0.01);assert.equal(x.months,2)});

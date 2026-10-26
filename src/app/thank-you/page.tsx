@@ -1,0 +1,3 @@
+import {Container,ButtonLink,Notice} from '@/components/ui/Shared';
+export const metadata={title:'Enquiry information'};
+export default function ThankYou(){return <section className="notfound"><Container><span className="eyebrow">ENMAC ENQUIRIES</span><h1>Thank you for exploring your options.</h1><p>To submit an enquiry, use the contact form and look for the success message. Reaching this page alone does not mean an enquiry was submitted.</p><Notice>Do not treat a website page view as proof of an application or lender decision.</Notice><ButtonLink href="/apply">Open enquiry form</ButtonLink></Container></section>}

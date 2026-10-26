@@ -1,0 +1,5 @@
+import type {Metadata} from 'next';
+import {PageHero,Container,CTA,Notice} from '@/components/ui/Shared';
+import ApplicationWorkspace from '@/components/forms/ApplicationWorkspace';
+export const metadata:Metadata={title:'Contact & Apply',description:'Start a conversation with ENMAC about personal, business or corporate financing options.'};
+export default function Apply(){return <><PageHero layout="contact" eyebrow="GET FINANCIAL GUIDANCE" title="Tell us where you want to go. We'll start with understanding." subtitle="Explore your options through a short enquiry or share more context in the guided application of interest. All lender decisions remain independent."/><section className="section contact-workspace" id="contact-options"><Container><ApplicationWorkspace/><div className="apply-notice"><Notice>Please wait for the success message after sending. If a submission fails, your details remain in the form so you can try again.</Notice></div></Container></section><CTA title="Explore first. Apply when you’re ready."/></>}
